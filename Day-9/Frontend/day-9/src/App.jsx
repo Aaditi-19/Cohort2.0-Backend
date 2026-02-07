@@ -7,7 +7,7 @@ function App() {
   // console.log("hello integration")
 
   function fetchNotes(){
-    axios.get("http://localhost:3000/api/notes")
+    axios.get("https://cohort2-0-backend-n2yw.onrender.com/api/notes")
     .then(res=>{
     setNotes(res.data.notes)
   })
@@ -23,7 +23,7 @@ function App() {
 
     console.log(title.value, description.value)
 
-    axios.post("http://localhost:3000/api/notes", {
+    axios.post("https://cohort2-0-backend-n2yw.onrender.com/api/notes", {
       title:title.value,
       description:description.value,
     })
@@ -35,7 +35,7 @@ function App() {
   }
 
   function handleDeleteNote(noteID){
-    axios.delete("http://localhost:3000/api/notes/"+noteID)
+    axios.delete("http://localhost:3000https://cohort2-0-backend-n2yw.onrender.com/api/notes/"+noteID)
     .then(res=>{
       console.log(res.data)
       fetchNotes()

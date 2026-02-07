@@ -35,7 +35,7 @@ function App() {
   }
 
   function handleDeleteNote(noteID){
-    axios.delete("http://localhost:3000https://cohort2-0-backend-n2yw.onrender.com/api/notes/"+noteID)
+    axios.delete("https://cohort2-0-backend-n2yw.onrender.com/api/notes/"+noteID)
     .then(res=>{
       console.log(res.data)
       fetchNotes()
